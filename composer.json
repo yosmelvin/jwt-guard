@@ -1,0 +1,26 @@
+{
+  "name": "paulvl/oauth-guard",
+  "description": "OAuth Guard for Laravel 5.2",
+  "keywords": [
+    "oauth",
+    "guard",
+    "laravel"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Paul Vidal",
+      "email": "i@paulvl.me"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/support": "5.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Paulvl\\JWTGuard\\": "src/"
+    }
+  }
+}
