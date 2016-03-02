@@ -1,8 +1,8 @@
 {
-  "name": "paulvl/oauth-guard",
-  "description": "OAuth Guard for Laravel 5.2",
+  "name": "paulvl/jwt-guard",
+  "description": "JWT Guard for Laravel 5.2",
   "keywords": [
-    "oauth",
+    "jwt",
     "guard",
     "laravel"
   ],
@@ -16,7 +16,8 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.9",
-    "illuminate/support": "5.2.*"
+    "illuminate/support": "5.2.*",
+    "firebase/php-jwt": "^3.0"
   },
   "autoload": {
     "psr-4": {
