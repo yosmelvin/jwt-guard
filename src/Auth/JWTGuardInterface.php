@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth;
+namespace LucasRomano\JWTGuard\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
@@ -31,8 +31,6 @@ interface JWTGuardInterface
     public function setRequest(Request $request);
 
     public function issueToken(AuthenticatableContract $user);
-
-    public function refreshToken();
 
     public function blacklistToken();
 }

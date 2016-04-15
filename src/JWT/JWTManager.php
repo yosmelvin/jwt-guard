@@ -1,16 +1,16 @@
 <?php
 
-namespace Paulvl\JWTGuard\JWT;
+namespace LucasRomano\JWTGuard\JWT;
 
 use Carbon\Carbon;
 use Exception;
 use Firebase\JWT\JWT;
 use Illuminate\Support\Facades\Cache;
-use Paulvl\JWTGuard\JWT\Token\CommonJWT;
-use Paulvl\JWTGuard\JWT\Token\ErrorToken;
-use Paulvl\JWTGuard\JWT\Token\RefreshJWT;
-use Paulvl\JWTGuard\JWT\Token\TokenInterface;
-use Paulvl\JWTGuard\JWT\Token\UserJWT;
+use LucasRomano\JWTGuard\JWT\Token\CommonJWT;
+use LucasRomano\JWTGuard\JWT\Token\ErrorToken;
+use LucasRomano\JWTGuard\JWT\Token\RefreshJWT;
+use LucasRomano\JWTGuard\JWT\Token\TokenInterface;
+use LucasRomano\JWTGuard\JWT\Token\UserJWT;
 
 class JWTManager
 {

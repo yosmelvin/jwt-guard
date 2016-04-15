@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulvl\JWTGuard\Support;
+namespace LucasRomano\JWTGuard\Support;
 
 
 

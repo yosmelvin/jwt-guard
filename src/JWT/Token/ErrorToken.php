@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulvl\JWTGuard\JWT\Token;
+namespace LucasRomano\JWTGuard\JWT\Token;
 
 
 class ErrorToken implements TokenInterface

@@ -1,15 +1,15 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth;
+namespace LucasRomano\JWTGuard\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
-use Paulvl\JWTGuard\JWT\Token\RefreshJWT;
-use Paulvl\JWTGuard\JWT\Token\UserJWT;
-use Paulvl\JWTGuard\Support\Facades\Serializer;
-use Paulvl\JWTGuard\JWT\JWTManager;
+use LucasRomano\JWTGuard\JWT\Token\RefreshJWT;
+use LucasRomano\JWTGuard\JWT\Token\UserJWT;
+use LucasRomano\JWTGuard\Support\Facades\Serializer;
+use LucasRomano\JWTGuard\JWT\JWTManager;
 
 class UserJWTGuard implements Guard, JWTGuardInterface
 {

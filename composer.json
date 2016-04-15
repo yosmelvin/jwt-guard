@@ -1,5 +1,5 @@
 {
-  "name": "paulvl/jwt-guard",
+  "name": "lucasromanojf/jwt-guard",
   "description": "JWT Guard for Laravel 5.2",
   "keywords": [
     "jwt",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Paul Vidal",
-      "email": "i@paulvl.me"
+      "name": "Lucas Romano",
+      "email": "lucasromanojf@gmail.com"
     }
   ],
   "minimum-stability": "dev",
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Paulvl\\JWTGuard\\": "src/"
+      "LucasRomano\\JWTGuard\\": "src/"
     }
   }
 }

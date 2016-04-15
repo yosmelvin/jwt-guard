@@ -1,13 +1,13 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth;
+namespace LucasRomano\JWTGuard\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Paulvl\JWTGuard\JWT\Token\CommonJWT;
-use Paulvl\JWTGuard\JWT\Token\RefreshJWT;
-use Paulvl\JWTGuard\JWT\Token\UserJWT;
-use Paulvl\JWTGuard\JWT\Token\ErrorToken;
+use LucasRomano\JWTGuard\JWT\Token\CommonJWT;
+use LucasRomano\JWTGuard\JWT\Token\RefreshJWT;
+use LucasRomano\JWTGuard\JWT\Token\UserJWT;
+use LucasRomano\JWTGuard\JWT\Token\ErrorToken;
 
 trait JWTGuardTrait
 {
@@ -94,7 +94,13 @@ trait JWTGuardTrait
     {
         $errors = [];
 
-        if (!is_null($tokenType) && !$this->token() instanceof ErrorToken) {
+        if (empty($this->token())) {
+            $errors['code'] = 401;
+            $errors['message'] = "Request must contain a valid API token.";
+            return $errors;
+        }
+
+        if (!is_null($tokenType) && !($this->token() instanceof ErrorToken)) {
             switch ($tokenType) {
                 case self::API_TOKEN:
                     if (!$this->tokenIsApi()) {

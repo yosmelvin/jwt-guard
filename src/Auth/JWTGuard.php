@@ -1,14 +1,14 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth;
+namespace LucasRomano\JWTGuard\Auth;
 
 use Illuminate\Auth\GuardHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\UserProvider;
-use Paulvl\JWTGuard\JWT\Token\CommonJWT;
-use Paulvl\JWTGuard\JWT\Token\RefreshJWT;
-use Paulvl\JWTGuard\JWT\JWTManager;
+use LucasRomano\JWTGuard\JWT\Token\CommonJWT;
+use LucasRomano\JWTGuard\JWT\Token\RefreshJWT;
+use LucasRomano\JWTGuard\JWT\JWTManager;
 
 class JWTGuard implements Guard, JWTGuardInterface
 {
@@ -25,19 +25,7 @@ class JWTGuard implements Guard, JWTGuardInterface
     public function getUserFromToken()
     {
         if ($this->token() instanceof CommonJWT && $this->validateToken() === true) {
-            return $this->provider->retrieveById($this->token()->get()->id);
-        }
-
-        return null;
-    }
-
-    public function refreshToken()
-    {
-        if ($this->token() instanceof RefreshJWT && $this->validateToken() === true) {
-            $user = $this->provider->retrieveById($this->token()->get() ->user_id);
-            return $user;
-            $this->token()->blacklist();
-            return $this->issueToken($user);
+            return $this->provider->retrieveById($this->token()->get()->user->id);
         }
 
         return null;

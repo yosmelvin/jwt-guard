@@ -1,10 +1,9 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth\Middleware;
+namespace LucasRomano\JWTGuard\Auth\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Paulvl\JWTGuard\Auth\JWTGuard;
 
 class AuthenticateJwt
 {
@@ -20,9 +19,9 @@ class AuthenticateJwt
     public function handle($request, Closure $next, $guard = 'jwt', $tokenType = 'api_token')
     {
         if ($request->ajax() || $request->wantsJson()) {
-            if (($errors = Auth::guard($guard)->validateToken($tokenType)) === true ) {
+            if (($errors = Auth::guard($guard)->validateToken($tokenType)) === true) {
                 if (Auth::guard($guard)->tokenIsApi()) {
-                    if (Auth::guard('jwt')->guest()) {
+                    if (Auth::guard($guard)->guest()) {
                         return response()->json('Unauthorized.', 401);
                     }
                 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Paulvl\JWTGuard\Auth;
+namespace LucasRomano\JWTGuard\Auth;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-use Paulvl\JWTGuard\JWT\JWTManager;
-use Paulvl\JWTGuard\Support\Serializer;
+use LucasRomano\JWTGuard\JWT\JWTManager;
+use LucasRomano\JWTGuard\Support\Serializer;
 
 class AuthServiceProvider extends ServiceProvider
 {
