@@ -94,12 +94,6 @@ trait JWTGuardTrait
     {
         $errors = [];
 
-        if (empty($this->token())) {
-            $errors['code'] = 401;
-            $errors['message'] = "Request must contain a valid API token.";
-            return $errors;
-        }
-
         if (!is_null($tokenType) && !($this->token() instanceof ErrorToken)) {
             switch ($tokenType) {
                 case self::API_TOKEN:

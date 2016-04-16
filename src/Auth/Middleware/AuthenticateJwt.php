@@ -24,6 +24,8 @@ class AuthenticateJwt
                     if (Auth::guard($guard)->guest()) {
                         return response()->json('Unauthorized.', 401);
                     }
+                } else if (is_null(Auth::user())) {
+                    return response()->json('Unauthorized.', 401);
                 }
             } else {
                 return response()->json($errors['message'], $errors['code']);
