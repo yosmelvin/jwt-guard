@@ -2,6 +2,8 @@
 
 JWT-Guard is a Laravel package that allow authentication and authorization as a guard driver using JWT tokens.
 
+This package was forked from paulvl/jwt-guard.
+
 ## **Quick Installation**
 
 Begin by installing this package through Composer.
