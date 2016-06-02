@@ -16,8 +16,14 @@ class AuthenticateJwt
      * @param  string|null  $guard
      * @return mixed
      */
-    public function handle($request, Closure $next, $guard = 'jwt', $tokenType = 'api_token')
+    public function handle($request, Closure $next, $guard = 'jwt', $tokenType = 'api_token', $upload = false)
     {
+        if ($upload) {
+            $request->headers->add([
+                'X-Requested-With' => 'XMLHttpRequest',
+                'Authorization' => 'Bearer ' . $request->token
+            ]);
+        }
         if ($request->ajax() || $request->wantsJson()) {
             if (($errors = Auth::guard($guard)->validateToken($tokenType)) === true) {
                 if (Auth::guard($guard)->tokenIsApi()) {
