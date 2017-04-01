@@ -10,12 +10,12 @@ Begin by installing this package through Composer.
 
 You can run:
 
-    composer require lucasromanojf/jwt-guard 0.*
+    composer require yosmelvin/jwt-guard 0.*
 
 Or edit your project's composer.json file to require lucasromanojf/jwt-guard.
 ```
     "require": {
-        "lucasromanojf/jwt-guard": "0.*"
+        "yosmelvin/jwt-guard": "0.*"
     }
 ```
 Next, update Composer from the Terminal:
