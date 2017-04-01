@@ -16,7 +16,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.9",
-    "illuminate/support": "5.2.*|5.3.*",
+    "illuminate/support": "5.2.*|5.3.*|5.4.*",
     "firebase/php-jwt": "^3.0"
   },
   "autoload": {
