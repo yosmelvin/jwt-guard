@@ -12,7 +12,7 @@ You can run:
 
     composer require yosmelvin/jwt-guard 0.*
 
-Or edit your project's composer.json file to require lucasromanojf/jwt-guard.
+Or edit your project's composer.json file to require yosmelvin/jwt-guard.
 ```
     "require": {
         "yosmelvin/jwt-guard": "0.*"
