@@ -1,6 +1,6 @@
 {
   "name": "yosmelvin/jwt-guard",
-  "description": "JWT Guard for Laravel 5.2",
+  "description": "JWT Guard for Laravel 5.4",
   "keywords": [
     "jwt",
     "guard",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Lucas Romano",
-      "email": "lucasromanojf@gmail.com"
+      "name": "Yos Melvin Tanoto",
+      "email": "yos_melvin@yahoo.co.id"
     }
   ],
   "minimum-stability": "dev",
