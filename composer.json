@@ -1,6 +1,6 @@
 {
   "name": "yosmelvin/jwt-guard",
-  "description": "JWT Guard for Laravel 5.4",
+  "description": "JWT Guard for Laravel 5.*",
   "keywords": [
     "jwt",
     "guard",
@@ -16,7 +16,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.9",
-    "illuminate/support": "5.2.*|5.3.*|5.4.*",
+    "illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*",
     "firebase/php-jwt": "^3.0"
   },
   "autoload": {
